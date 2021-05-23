@@ -1,0 +1,64 @@
+{include file="../Public/public.html"}
+<div class="admin">
+	<form action="index.php?p=Admin&c=Member&a=delAll" method="POST">
+    <div class="panel admin-panel">
+    	<div class="panel-head"><strong>成员列表</strong></div>
+        <div class="padding border-bottom">
+            <input type="button" class="button button-small checkall" name="checkall" checkfor="member_id[]" value="全选" />
+            <input type="button" id="btnAdd" class="button button-small border-green" value="添加成员" />
+            <input type="submit" class="button button-small border-yellow" id="plsc"  value="批量删除" / onclick="return confirm('确定删除吗');">
+        </div>
+        <table class="table table-hover">
+        	<tr>
+                <th width="45">选择</th>
+                <th width="120">成员名</th>
+                <th width="200">成员组别</th>
+                <th width="120">成员手机号码</th>
+                <th width="120">成员学号</th>
+                <th width="180">是否在主页上</th>
+                <th width="100">操作</th>
+            </tr>
+            {foreach from=$member_list item=row}
+            <tr>
+                <td><input type="checkbox" name="member_id[]" value="{$row.member_id}" /></td>
+                <td>{$row.member_name}</td>
+                <td>{$row.group_name}</td>
+                <td>{$row.member_phone}</td>
+                <td>{$row.member_number}</td>
+                <td>{if $row.member_onindex=='0'}否{else}是{/if}</td>
+                <td>
+                    <a class="button border-blue button-little" href="index.php?p=Admin&c=Member&a=edit&member_id={$row.member_id}">修改</a> 
+                    <a class="button border-yellow button-little" href="index.php?p=Admin&c=Member&a=del&member_id={$row.member_id}" >删除</a>
+                </td>
+            </tr>
+            {/foreach}
+        </table>
+
+		<div class="panel-foot text-center">
+            {$strPage}
+        </div>
+    </div>
+    </form>
+    <br />
+    <p class="text-right text-gray" style="float:right">基于<a class="text-gray" target="_blank" href="#">MVC框架</a>构建</p>
+</div>
+
+
+
+    <script>
+        $(function(){
+            $('#btnAdd').click(
+                function(){
+                    window.location.href  = 'index.php?p=Admin&c=Member&a=add'
+                }
+            );
+        });
+        $(function(){
+    $("#top-nav>li").eq(1).addClass('active').siblings().removeClass('active');
+});
+    </script>
+
+{include file='../Public/script.html'}
+
+</body>
+</html>

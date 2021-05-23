@@ -1,0 +1,73 @@
+{include file='../Public/public.html'}
+<div class="admin">
+  <div class="tab">
+    <div class="tab-head"> <strong>站点首页管理</strong>
+      <ul class="tab-nav">
+        <li class="active"><a href="#tab-set">首页显示成员</a></li>
+      </ul>
+    </div>
+    <div class="tab-body"> <br />
+      <div class="tab-panel active" id="tab-set">
+        <form method="POST" class="form-x" action="index.php?p=Admin&c=Manage&a=dealIndexManage" enctype="multipart/form-data">
+          <div class="form-group">
+            <div class="label">
+              <label for="sitename">第一成员</label>
+            </div>
+            <div class="field">
+              <select class="select" name="member_id[]" >
+                {foreach from=$membersInfo item=row}
+                <option value="{$row.member_id}" {if $row.member_onindex=='1'}selected{/if}>{$row.member_name}</option>
+                {/foreach}
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="label">
+              <label for="siteurl">第二成员</label>
+            </div>
+            <div class="field">
+                <select class="select" name="member_id[]" >
+                    {foreach from=$membersInfo item=row}
+                    <option value="{$row.member_id}" {if $row.member_onindex=='2'}selected{/if}>{$row.member_name}</option>
+                    {/foreach}
+                </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="label">
+              <label for="readme">第三成员</label>
+            </div>
+            <div class="field">
+                <select class="select" name="member_id[]">
+                    {foreach from=$membersInfo item=row}
+                    <option value="{$row.member_id}" {if $row.member_onindex=='3'}selected{/if} >{$row.member_name}</option>
+                    {/foreach}
+                  </select>
+            </div>
+          </div>
+
+          <div class="form-button">
+            <button name="submit" class="button bg-main" type="submit">提交</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div style='height:40px; border-bottom:1px #DDD solid'></div>
+  <p class="text-right text-gray" style="float:right">基于<a class="text-gray" target="_blank" href="#">MVC框架</a>构建</p>
+</div>
+
+
+{include file='../Public/script.html'}
+<script>
+
+    $(function(){
+        $("#top-nav>li").eq(0).addClass('active').siblings().removeClass('active');
+    });
+    
+    </script>
+    
+</body>
+</html>

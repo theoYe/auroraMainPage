@@ -1,0 +1,15 @@
+
+<script>
+$(function(){
+    $('#top-nav>li').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+    $('.side-bar>li').mouseover(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    }).mouseout(function(){
+        $('.side-bar>li').removeClass('active');
+    });
+});
+
+
+</script>

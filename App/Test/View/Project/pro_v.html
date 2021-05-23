@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>笑话名称</th>
+            </tr>
+        </thead>
+        <tbody>
+            {foreach $joke_list as $joke}
+            <tr>
+                <td>{$joke['id']}</td>
+                <td>{$joke['type']}</td>
+                <td><input type="button" value="删除" onclick="location.href='/v17/index.php?a=remove&c=Project&id={$joke['id']}';"></td>
+            </tr>
+            {/foreach}
+
+    </table>
+    <p><a href="/v17/index.php?p=Test&c=Tea&a=list">查看教师列表</a></p>
+        </tbody>
+</body>
+</html>

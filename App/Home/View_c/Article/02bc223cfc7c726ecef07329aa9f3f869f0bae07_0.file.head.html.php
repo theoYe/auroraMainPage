@@ -1,0 +1,65 @@
+<?php
+/* Smarty version 3.1.33, created on 2019-08-06 20:52:32
+  from '/var/www/html/aurora/App/Home/View/Public/head.html' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5d4978105762b4_94025516',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '02bc223cfc7c726ecef07329aa9f3f869f0bae07' => 
+    array (
+      0 => '/var/www/html/aurora/App/Home/View/Public/head.html',
+      1 => 1565095536,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5d4978105762b4_94025516 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo @constant('IMAGES_DIR');?>
+apple-icon.png">
+    <link rel="icon" type="image/png" href="<?php echo @constant('IMAGES_DIR');?>
+favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>极光网安实验室</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="<?php echo @constant('CSS_DIR');?>
+article.css">
+    <link rel="stylesheet" href="<?php echo @constant('CSS_DIR');?>
+member.css">
+    <link href="<?php echo @constant('CSS_DIR');?>
+bootstrap.min.css" rel="stylesheet" />
+    <link href="<?php echo @constant('CSS_DIR');?>
+now-ui-kit.css?v=1.1.0" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="<?php echo @constant('CSS_DIR');?>
+demo.css" rel="stylesheet" />
+    <!-- 灯泡的CSS样式 -->
+    <link rel="stylesheet" href="<?php echo @constant('CSS_DIR');?>
+/bubble.css">
+
+    <!-- Canonical SEO -->
+      <!--  Social tags      -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    
+</head>
+
+
+    <!-- End Navbar -->
+<?php }
+}
